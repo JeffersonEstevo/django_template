@@ -19,6 +19,7 @@ from django.urls import path, include
 from home import views as home_views
 from blog import views as blog_views
 
+# app_name = ''
 
 urlpatterns = [
     path('admin/', admin.site.urls),
