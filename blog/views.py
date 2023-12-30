@@ -1,5 +1,6 @@
 #from django.http import HttpResponse
 from django.shortcuts import render
+from blog.data import posts
 
 def blog(request):
     print('blog')
@@ -8,6 +9,7 @@ def blog(request):
     context = {
         'text': 'Olá Blog',
         'title': 'Blog -',
+        'posts': posts
     }
     
     return render(
