@@ -18,6 +18,23 @@ def blog(request):
         context,
    )
 
+def post(request, id):
+    print('post', id)
+    # return HttpResponse('blog do app')
+
+    context = {
+        'text': 'Olá Blog',
+        'title': 'Blog -',
+        'posts': posts
+    }
+    
+    return render(
+        request,
+        'blog/blog.html',
+        context,
+   )
+
+
 def exemplo(request):
     print('exemplo')
 
