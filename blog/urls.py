@@ -12,6 +12,6 @@ urlpatterns = [
     #path('post/<int:id>/', views.post, name='post'),
     #path('exemplo/', views.exemplo, name='exemplo'),
     path('', views.blog, name='home'),
-    path('<int:id>/', views.post, name='post'),
+    path('<int:post_id>/', views.post, name='post'),
     path('exemplo/', views.exemplo, name='exemplo'),
 ]
