@@ -104,9 +104,6 @@ python manage.py runserver
 - O terminal exibirá algo como:
 Starting development server at http://127.0.0.1:8000/
 
-yaml
-Copiar
-Editar
 - Acesse a aplicação no navegador no endereço [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
 ---
@@ -128,8 +125,6 @@ Quando terminar, desative o ambiente virtual:
 ```
 deactivate
 ```
-
----
 
 ### **c. Alterar temporariamente a política de execuçãol**
 Para habilitar a execução de scripts apenas enquanto o terminal atual estiver aberto:
