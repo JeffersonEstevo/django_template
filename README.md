@@ -131,6 +131,24 @@ deactivate
 
 ---
 
+### **c. Alterar temporariamente a política de execuçãol**
+Para habilitar a execução de scripts apenas enquanto o terminal atual estiver aberto:
+
+Abra o PowerShell como administrador.
+
+Clique com o botão direito no ícone do PowerShell e selecione Executar como Administrador.
+Rode o seguinte comando para permitir a execução temporária de scripts:
+
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Tente ativar o ambiente virtual novamente:
+
+```
+.\venv\Scripts\Activate
+```
+
 ## **Resumo dos Comandos**
 
 1. **Criar pasta e ambiente virtual**:
