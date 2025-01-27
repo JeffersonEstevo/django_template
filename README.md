@@ -149,6 +149,13 @@ Tente ativar o ambiente virtual novamente:
 .\venv\Scripts\Activate
 ```
 
+Os comandos juntos em uma única linha ficam:
+
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\Activate
+```
+
 ## **Resumo dos Comandos**
 
 1. **Criar pasta e ambiente virtual**:
