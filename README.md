@@ -79,10 +79,15 @@ Antes de rodar o projeto, configure o banco de dados no arquivo `settings.py`. P
 ---
 
 ## **5. Rodar as migrações**
-Crie as tabelas no banco de dados com o comando:
+Crie as tabelas no banco de dados com os comandos:
+
+```
+python manage.py makemigrations
+```
 ```
 python manage.py migrate
 ```
+
 
 ---
 
