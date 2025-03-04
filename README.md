@@ -33,6 +33,12 @@ python -m venv venv
 ```
 venv\Scripts\activate
 ```
+Caso dê probelma ao executar no Windows, fazer Bypass nas políticas de execução:
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\venv\Scripts\Activate
+```
+
 - **Linux/Mac**:
 ```
 source venv/bin/activate
