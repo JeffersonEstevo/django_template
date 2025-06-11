@@ -79,12 +79,21 @@ Se o projeto já existe, basta garantir que as dependências estejam instaladas 
 
 ---
 
-## **4. Configurar o banco de dados**
+## **4. Criar um aplicativo (app)**
+Use o comando 
+
+```
+django-admin startapp <nome_do_app> 
+```
+dentro da pasta do projeto. 
+
+---
+## **5. Configurar o banco de dados**
 Antes de rodar o projeto, configure o banco de dados no arquivo `settings.py`. Para começar, geralmente é utilizado o SQLite (configuração padrão).
 
 ---
 
-## **5. Rodar as migrações**
+## **6. Rodar as migrações**
 Crie as tabelas no banco de dados com os comandos:
 
 ```
@@ -97,7 +106,7 @@ python manage.py migrate
 
 ---
 
-## **6. Criar um superusuário (opcional)**
+## **7. Criar um superusuário (opcional)**
 Se você quiser acessar o Django Admin:
 ```
 python manage.py createsuperuser
@@ -106,7 +115,7 @@ Preencha o nome de usuário, e-mail (opcional) e senha.
 
 ---
 
-## **7. Rodar o servidor**
+## **8. Rodar o servidor**
 Inicie o servidor de desenvolvimento do Django:
 ```
 python manage.py runserver
@@ -119,7 +128,7 @@ Starting development server at http://127.0.0.1:8000/
 
 ---
 
-## **8. Outras Configurações Úteis**
+## **9. Outras Configurações Úteis**
 
 ### **a. Instalar novas dependências**
 Se precisar adicionar mais bibliotecas, use o `pip`:
