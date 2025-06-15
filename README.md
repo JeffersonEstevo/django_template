@@ -63,6 +63,16 @@ pip install -r requirements.txt
 
 ---
 
+### **a. Verificar Versão do Django instalada**
+Para verificar a versão do Django instalada, execute o comando:
+```
+django-admin --version  
+```
+ou
+```
+python -m django --version
+```
+
 ## **3. Criar ou configurar o projeto Django**
 
 ### **a. Criar um novo projeto**
