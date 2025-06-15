@@ -139,6 +139,13 @@ Starting development server at http://127.0.0.1:8000/
 ---
 
 ## **9. Outras Configurações Úteis**
+Caso seja necessário gerar uma nova SECRET KEY do Django:
+```
+from django.core.management.utils import get_random_secret_key
+print(get_random_secret_key())
+```
+
+## **10. Outras Configurações Úteis**
 
 ### **a. Instalar novas dependências**
 Se precisar adicionar mais bibliotecas, use o `pip`:
