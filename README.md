@@ -138,11 +138,56 @@ Starting development server at http://127.0.0.1:8000/
 
 ---
 
-## **9. Outras Configurações Úteis**
-Caso seja necessário gerar uma nova SECRET KEY do Django:
+# 9. Geração de nova `SECRET_KEY` para Django
+
+Para gerar uma nova `SECRET_KEY` no Django, utilize um dos métodos abaixo:
+
+---
+
+## ✅ Método 1: Via shell interativo do Python
+
+```bash
+# Ative seu ambiente virtual (se aplicável)
+source venv/bin/activate  # Linux/Mac
+.env\Scriptsctivate   # Windows
+
+# Acesse o interpretador Python
+python
 ```
+
+Dentro do interpretador Python:
+
+```python
 from django.core.management.utils import get_random_secret_key
-print(get_random_secret_key())
+print(get_random_secret_key())  # Copie esta chave
+exit()  # Para sair
+```
+
+---
+
+## ✅ Método 2: Comando único (recomendado)
+
+```bash
+python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+```
+
+---
+
+## ✅ Método 3: Usando `manage.py`
+
+```bash
+python manage.py shell -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+```
+
+---
+
+## 🔐 Onde configurar a chave?
+
+Abra o arquivo `settings.py` do seu projeto Django e adicione a chave gerada:
+
+```python
+# settings.py
+SECRET_KEY = 'sua-chave-gerada-aqui'  # Substitua pela chave copiada
 ```
 
 ## **10. Outras Configurações Úteis**
