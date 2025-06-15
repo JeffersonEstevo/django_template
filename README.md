@@ -206,7 +206,85 @@ SECRET_KEY = 'sua-chave-gerada-aqui'  # Substitua pela chave copiada
 
 ---
 
-## **10. Outras Configurações Úteis**
+## **10. Configuração do Whitenoise para Arquivos Estáticos**
+
+Se você encontrar o erro `ModuleNotFoundError: No module named 'whitenoise'` ao executar o servidor, siga estes passos:
+
+---
+
+### **Instalação e Configuração**
+
+1. Instale o pacote whitenoise no seu ambiente virtual:
+
+   ```bash
+   pip install whitenoise
+   ```
+
+2. Configure no `settings.py`:
+
+   ```python
+   MIDDLEWARE = [
+       # ...
+       'django.middleware.security.SecurityMiddleware',
+       'whitenoise.middleware.WhiteNoiseMiddleware',  # Imediatamente após SecurityMiddleware
+       # ...
+   ]
+
+   # Configuração opcional para compressão de arquivos estáticos (recomendado para produção)
+   STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+   ```
+
+---
+
+### **Comandos Úteis**
+
+Para coletar arquivos estáticos (necessário após instalação):
+
+```bash
+python manage.py collectstatic
+```
+
+Para executar o servidor em desenvolvimento:
+
+```bash
+python manage.py runserver
+```
+
+---
+
+### **Observações Importantes**
+
+Em ambientes de produção, considere usar:
+
+```bash
+python manage.py runserver --insecure
+```
+
+Apenas se houver problemas com arquivos estáticos.
+
+> O **Whitenoise** é especialmente útil para deploy em serviços como **Heroku** ou **Render**.
+
+---
+
+### **Dicas Extras**
+
+1. Se quiser adicionar um ícone de atenção para destacar a importância:
+
+   > ⚠️ **Atenção**: A ordem do middleware é crucial! `WhiteNoiseMiddleware` deve sempre vir após `SecurityMiddleware`.
+
+2. Para deixar mais visual, você pode adicionar um exemplo de estrutura de middlewares:
+
+   ```python
+   MIDDLEWARE = [
+       'django.middleware.security.SecurityMiddleware',
+       'whitenoise.middleware.WhiteNoiseMiddleware',  # ← Aqui
+       'django.contrib.sessions.middleware.SessionMiddleware',
+       'django.middleware.common.CommonMiddleware',
+       # ... outros middlewares
+   ]
+   ```
+
+## **11. Outras Configurações Úteis**
 
 ### **a. Instalar novas dependências**
 
